@@ -23,8 +23,9 @@ app.get('/webhook', function(req, res){
     if ( req.query['hub.verify_token'] === "EAArdQlHVItwBANBAgPqiqZAnmsmL32vlsRRUvjo6mpNSKakZC2zSenVIiQWzQE6wZBgWU2jthJw49ocdNwc4myLhZCtMVnGBXdRAWogdcyVssTWZBZAZBR9hpZCZB4luZCZBD8i8XeJZC11EfvHCgaCgZCA9hRCPo82HyRORxcjJqxzT4S6R0O3HRsZCZCZB") {
        
         res.send(req.query['hub.challenge'])
+    }else{
+        res.send("Wrong token");
     }
-    res.send("Wrong token");
 })
 
 app.listen(app.get('port'), function(){
