@@ -44,7 +44,7 @@ app.post('/webhook', function(req, res){
 })
 
 function sendText(sender, text){
-    let messageData = {text; text};
+    let messageData = {text: text};
     request({
         url: "https://www.facebook.com/Hansson-atlantic-1537779486504379",
         qs: {access_token : token},
