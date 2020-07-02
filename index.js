@@ -19,7 +19,9 @@ app.get('/', function(req,res) {
 
 // Facebook
 app.get('/webhook', function(req, res){
-    if ( req.query['hub.verify_token'] === "EAArdQlHVItwBAGHUI5oIKiVjmNuaAKnlHocrZAgp82FwTyvCprhTisYaoa82XGKZAKiZBKZBR23TQ4xXDjVdBlt9iaDAM8a0GjZCqCcPttzSOM5H7mROk8QYTKcyo4Ht8OHeaG5vBVBju8b9onQzXEXE5IxZCC5BOXOxZA2ZBCQjrTika6EeUcHK") {
+    console.log("My token:"+req.query['hub.verify_token']);
+    if ( req.query['hub.verify_token'] === "EAArdQlHVItwBANBAgPqiqZAnmsmL32vlsRRUvjo6mpNSKakZC2zSenVIiQWzQE6wZBgWU2jthJw49ocdNwc4myLhZCtMVnGBXdRAWogdcyVssTWZBZAZBR9hpZCZB4luZCZBD8i8XeJZC11EfvHCgaCgZCA9hRCPo82HyRORxcjJqxzT4S6R0O3HRsZCZCZB") {
+       
         res.send(req.query['hub.challenge'])
     }
     res.send("Wrong token");
