@@ -19,7 +19,7 @@ app.get('/', function(req,res) {
 
 // Facebook
 app.get('/webhook', function(req, res){
-    if ( req.query['hub.verify_token'] === "junchatbot") {
+    if ( req.query['hub.verify_token'] === "EAArdQlHVItwBAGHUI5oIKiVjmNuaAKnlHocrZAgp82FwTyvCprhTisYaoa82XGKZAKiZBKZBR23TQ4xXDjVdBlt9iaDAM8a0GjZCqCcPttzSOM5H7mROk8QYTKcyo4Ht8OHeaG5vBVBju8b9onQzXEXE5IxZCC5BOXOxZA2ZBCQjrTika6EeUcHK") {
         res.send(req.query['hub.challenge'])
     }
     res.send("Wrong token");
