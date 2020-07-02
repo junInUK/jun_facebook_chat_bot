@@ -53,13 +53,15 @@ function sendText(sender, text){
             recipient: {id: sender},
             message: messageData
         }
-    }, function(error, response, body){
-        if(error){
-            console.log("sending error");
-        } else if (response.body.error){
-            console.log("response body error");
-        }
-    })
+    }
+    // , function(error, response, body){
+    //     if(error){
+    //         console.log("sending error");
+    //     } else if (response.body.error){
+    //         console.log("response body error");
+    //     }
+    // }
+    )
 }
 
 app.listen(app.get('port'), function(){
