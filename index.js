@@ -12,8 +12,14 @@ const PORT = process.env.PORT || 5000;
 
 //app.set('port', (process.env.PORT || 5000));
 
-//  Allows us to process the data
+/**
+ *  create application/x-www-form-urlencoded parser
+ *  extended: use querystring parse url when set false
+ *            use qs parse url when set true
+ *            default = true 
+ * */  
 app.use(bodyParser.urlencoded({extended: false}));
+//  create application/json parser
 app.use(bodyParser.json());
 
 //  ROUTES
